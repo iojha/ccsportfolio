@@ -1,0 +1,260 @@
+/*GLOBAL STYLES*/
+
+.headline {
+	color: #fff;
+	padding: 3% 0;
+}
+.container-fluid {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+section {
+	padding: 8% 0;
+}
+.white {
+	color: #fff;
+}
+body {
+	margin-top: 0;
+	margin-bottom: 50px;
+	background: none;
+	color: #1c1c1c;
+}
+
+/*LOGO Transformations*/
+
+
+/* WebKit and Opera browsers */
+
+.logo>img {
+	position: absolute;
+	width: 100%;
+	left: 48%;
+	right: 0;
+	top: 20px;
+	width: 80px;
+	height: 80px;
+	/* Chrome, Safari, Opera */
+	-webkit-animation-duration: 2s;
+	/* Chrome, Safari, Opera */
+	animation: spinner 2s;
+	-moz-animation: spinner 2s;
+	/* Firefox */
+	-webkit-animation: spinner 2s;
+}
+@-webkit-keyframes spinner {
+	from {
+		-webkit-transform: rotateY(0deg);
+	}
+	to {
+		-webkit-transform: rotateY(-360deg);
+	}
+}
+
+/* all other browsers */
+
+@keyframes spinner {
+	from {
+		-moz-transform: rotateY(0deg);
+		-ms-transform: rotateY(0deg);
+		transform: rotateY(0deg);
+	}
+	to {
+		-moz-transform: rotateY(-360deg);
+		-ms-transform: rotateY(-360deg);
+		transform: rotateY(-360deg);
+	}
+}
+
+/*HEART ICON Creation + Animation*/
+
+#heart {
+	position: relative;
+	width: 100px;
+	height: 90px;
+}
+#heart:before,
+#heart:after {
+	position: absolute;
+	content: "";
+	left: 50px;
+	top: 0;
+	width: 50px;
+	height: 80px;
+	background-color: #ba3238;
+	/* Chrome, Safari, Opera */
+	-webkit-animation-duration: 4s;
+	/* Chrome, Safari, Opera */
+	animation: fader 10s infinite;
+	-moz-animation: fader 10s infinite;
+	/* Firefox */
+	-webkit-animation: fader 10s infinite;
+	-moz-border-radius: 50px 50px 0 0;
+	border-radius: 50px 50px 0 0;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-transform-origin: 0 100%;
+	-moz-transform-origin: 0 100%;
+	-ms-transform-origin: 0 100%;
+	-o-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+}
+#heart:after {
+	left: 0;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transform-origin: 100% 100%;
+	-moz-transform-origin: 100% 100%;
+	-ms-transform-origin: 100% 100%;
+	-o-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+}
+
+/* Chrome, Safari, Opera */
+
+@-webkit-keyframes fader {
+	25% {
+		background-color: #743475;
+	}
+	50% {
+		background-color: #ba3238;
+	}
+	75% {
+		background-color: #32567d;
+	}
+}
+.purple {
+	color: #743475;
+}
+.red {
+	color: #ba3238;
+}
+.blue {
+	color: #32567d;
+}
+.yellow {
+	color: #b89a4e;
+}
+
+/*NAV BAR STYLES*/
+
+.logo {
+	position: absolute;
+	width: 100%;
+	top: 20px;
+	text-align: center;
+	margin: 0 auto;
+	z-index: 1000;
+}
+#navbar-collapse-1 {
+	background-color: #1c1c1c;
+}
+.navbar {
+	/*	background: rgba(0, 0, 0, 0); */
+	border-radius: 0 0;
+	margin-bottom: 0;
+	margin-top: 0px;
+	z-index: 1000;
+}
+.navbar-default,
+.navbar-toggle {
+	border: none;
+}
+.navbar-toggle {
+	margin-top: 30px;
+}
+.navbar-right {
+	margin-top: 20px;
+	color: #fff;
+}
+.navbar-nav>li>a {
+	color: #000 !important;
+}
+
+/*Landing Page Styles*/
+
+#home {
+	background-color: #000;
+}
+#home-left {
+	background-color: #1c1c1c;
+	background-size: cover;
+	padding: 20% 15% 15% 15%;
+	/*	margin-top: -30px;*/
+}
+#home-right {
+	background-color: #000;
+	background-size: cover;
+	padding: 20% 15% 15% 15%;
+}
+
+/*ABOUT PAGE STYLES*/
+
+#about {
+	background: #e2e2e2;
+	color: #838b91;
+}
+
+/*WORK PAGE STYLES*/
+
+#work {
+	background-color: #000;
+	color: #838b91;
+}
+.work-row::after {
+	content: "";
+	display: block;
+	height: 1px;
+	width: 100%;
+	background: #b89a4e;
+}
+
+/*Mobile Styles*/
+
+@media (max-width: 2400px) {
+	.navbar {
+		color: #fff;
+	}
+	.navbar-header {
+		float: none;
+	}
+	.navbar-toggle {
+		display: block;
+		margin-top: 40px;
+	}
+	.navbar-collapse {
+		border-top: 1px solid transparent;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	}
+	.navbar-collapse.collapse {
+		display: none!important;
+	}
+	.navbar-nav {
+		float: none!important;
+		margin: 7.5px -15px;
+	}
+	.navbar-nav>li {
+		float: none;
+	}
+	.navbar-nav>li>a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.navbar-text {
+		float: none;
+		margin: 15px 0;
+	}
+	/* since 3.1.0 */
+	.navbar-collapse.collapse.in {
+		display: block!important;
+	}
+	.collapsing {
+		overflow: hidden!important;
+	}
+}
